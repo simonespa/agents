@@ -1,0 +1,31 @@
+{
+  "name": "agents",
+  "version": "1.0.0",
+  "description": "",
+  "bin": {
+    "agents": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsc --project ./tsconfig.json --noEmit --watch",
+    "build": "tsc --project ./tsconfig.production.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.12.1",
+  "type": "module",
+  "dependencies": {
+    "@ai-sdk/huggingface": "^1.0.27",
+    "ai": "^6.0.66",
+    "ai-sdk-ollama": "^3.3.0",
+    "dotenv": "^17.2.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.1.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
