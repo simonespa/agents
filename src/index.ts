@@ -2,6 +2,9 @@
 
 import { runAgent } from "./agent.js";
 import meow from 'meow';
+import { render } from 'ink';
+import CommandLine from './ui/CommandLine.js';
+import React from "react";
 
 const cli = meow(
   `
@@ -20,7 +23,11 @@ const cli = meow(
   },
 );
 
+let output = '';
+
 if (cli.input.length === 1) {
   const prompt = cli.input[0];
-  runAgent(prompt!);
+  output = await runAgent(prompt!);
 }
+
+render(React.createElement(CommandLine, { output }));

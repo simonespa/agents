@@ -21,11 +21,10 @@ export async function runAgent(prompt: string) {
     tools,
   });
 
-  console.log(text);
-  // console.log('Tool Calls:', toolCalls);
+  return text;
 
-  toolCalls?.forEach(async (call) => {
-    const toolResult = await executeTool(call.toolName, call.input);
-    console.log(`Tool "${call.toolName}" executed with result:`, toolResult);
-  });
+  // toolCalls?.forEach(async (call) => {
+  //   const toolResult = await executeTool(call.toolName, call.input);
+  //   console.log(`Tool "${call.toolName}" executed with result:`, toolResult);
+  // });
 }
