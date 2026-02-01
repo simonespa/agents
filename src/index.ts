@@ -1,35 +1,26 @@
 #!/usr/bin/env node
 
-import 'dotenv/config';
-import { generateText } from 'ai';
-import { huggingface } from '@ai-sdk/huggingface';
-import { ollama } from 'ai-sdk-ollama';
-import { SYSTEM_PROMPT } from './system-prompt.js';
-import { tools, executeTool } from './tools/index.js';
+import { runAgent } from "./agent.js";
+import meow from 'meow';
 
-export async function runAgent(prompt: string) {
-  // const { text, toolCalls } = await generateText({
-  //   model: huggingface('deepseek-ai/DeepSeek-V3-0324'),
-  //   prompt,
-  //   system: SYSTEM_PROMPT,
-  //   tools,
-  // });
+const cli = meow(
+  `
+    Usage
+      $ agents <prompt>
 
-  const { text, toolCalls } = await generateText({
-    model: ollama('gpt-oss:120b-cloud'),
-    prompt,
-    system: SYSTEM_PROMPT,
-    providerOptions: { ollama: { think: true } },
-    tools,
-  });
+    Examples
+      $ agents "Tell me a joke about computers."
 
-  console.log('Agent Response:', text);
-  console.log('Tool Calls:', toolCalls);
+      Why do programmers prefer dark mode?
 
-  toolCalls?.forEach(async (call) => {
-    const toolResult = await executeTool(call.toolName, call.input);
-    console.log(`Tool "${call.toolName}" executed with result:`, toolResult);
-  });
+      Because light attracts bugs!
+  `,
+  {
+    importMeta: import.meta,
+  },
+);
+
+if (cli.input.length === 1) {
+  const prompt = cli.input[0];
+  runAgent(prompt!);
 }
-
-runAgent('Tell me a joke about computers.');
