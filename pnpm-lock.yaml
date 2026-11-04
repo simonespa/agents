@@ -10,13 +10,13 @@ importers:
     dependencies:
       '@ai-sdk/huggingface':
         specifier: ^1.0.27
-        version: 1.0.27(zod@4.3.6)
+        version: 1.0.27(zod@4.6.6)
       ai:
         specifier: ^6.0.66
-        version: 6.0.66(zod@4.3.6)
+        version: 6.0.66(zod@4.6.6)
       ai-sdk-ollama:
         specifier: ^3.3.0
-        version: 3.3.0(ai@6.0.66(zod@4.3.6))(zod@4.3.6)
+        version: 3.3.0(ai@6.0.66(zod@4.6.6))(zod@4.6.6)
       dotenv:
         specifier: ^17.2.3
         version: 17.2.3
@@ -34,7 +34,7 @@ importers:
         version: 19.2.4
       zod:
         specifier: ^4.3.6
-        version: 4.3.6
+        version: 4.6.6
     devDependencies:
       '@types/node':
         specifier: ^25.1.0
@@ -503,37 +503,37 @@ packages:
   yoga-layout@3.2.1:
     resolution: {integrity: sha512-0LPOt3AxKqMdFBZA3HBAt/t/8vIKq7VaQYbuA8WxCgung+p9TVyKRYdpvCb80HcdTN2NkbIKbhNwKUfm3tQywQ==}
 
-  zod@4.3.6:
-    resolution: {integrity: sha512-rftlrkhHZOcjDwkGlnUtZZkvaPHCsDATp4pGpuOOMDaTdDDXF91wuVDJoWoPsKX/3YPQ5fHuF3STjcYyKr+Qhg==}
+  zod@4.6.6:
+    resolution: {integrity: sha512-4UmzQUF5fxvfcYHlbjBmejU+w+hbDnWFx4aS8kBx7nPBHcO2SqPbpAG8snbdg+Xse4pRefR98hgjFgIMCI/UhA==}
 
 snapshots:
 
-  '@ai-sdk/gateway@3.0.31(zod@4.3.6)':
+  '@ai-sdk/gateway@3.0.31(zod@4.6.6)':
     dependencies:
       '@ai-sdk/provider': 3.0.6
-      '@ai-sdk/provider-utils': 4.0.12(zod@4.3.6)
+      '@ai-sdk/provider-utils': 4.0.12(zod@4.6.6)
       '@vercel/oidc': 3.1.0
-      zod: 4.3.6
+      zod: 4.6.6
 
-  '@ai-sdk/huggingface@1.0.27(zod@4.3.6)':
+  '@ai-sdk/huggingface@1.0.27(zod@4.6.6)':
     dependencies:
-      '@ai-sdk/openai-compatible': 2.0.25(zod@4.3.6)
+      '@ai-sdk/openai-compatible': 2.0.25(zod@4.6.6)
       '@ai-sdk/provider': 3.0.6
-      '@ai-sdk/provider-utils': 4.0.12(zod@4.3.6)
-      zod: 4.3.6
+      '@ai-sdk/provider-utils': 4.0.12(zod@4.6.6)
+      zod: 4.6.6
 
-  '@ai-sdk/openai-compatible@2.0.25(zod@4.3.6)':
+  '@ai-sdk/openai-compatible@2.0.25(zod@4.6.6)':
     dependencies:
       '@ai-sdk/provider': 3.0.6
-      '@ai-sdk/provider-utils': 4.0.12(zod@4.3.6)
-      zod: 4.3.6
+      '@ai-sdk/provider-utils': 4.0.12(zod@4.6.6)
+      zod: 4.6.6
 
-  '@ai-sdk/provider-utils@4.0.12(zod@4.3.6)':
+  '@ai-sdk/provider-utils@4.0.12(zod@4.6.6)':
     dependencies:
       '@ai-sdk/provider': 3.0.6
       '@standard-schema/spec': 1.1.0
       eventsource-parser: 3.0.6
-      zod: 4.3.6
+      zod: 4.6.6
 
   '@ai-sdk/provider@3.0.6':
     dependencies:
@@ -640,22 +640,22 @@ snapshots:
 
   '@vercel/oidc@3.1.0': {}
 
-  ai-sdk-ollama@3.3.0(ai@6.0.66(zod@4.3.6))(zod@4.3.6):
+  ai-sdk-ollama@3.3.0(ai@6.0.66(zod@4.6.6))(zod@4.6.6):
     dependencies:
       '@ai-sdk/provider': 3.0.6
-      '@ai-sdk/provider-utils': 4.0.12(zod@4.3.6)
-      ai: 6.0.66(zod@4.3.6)
+      '@ai-sdk/provider-utils': 4.0.12(zod@4.6.6)
+      ai: 6.0.66(zod@4.6.6)
       ollama: 0.6.3
     transitivePeerDependencies:
       - zod
 
-  ai@6.0.66(zod@4.3.6):
+  ai@6.0.66(zod@4.6.6):
     dependencies:
-      '@ai-sdk/gateway': 3.0.31(zod@4.3.6)
+      '@ai-sdk/gateway': 3.0.31(zod@4.6.6)
       '@ai-sdk/provider': 3.0.6
-      '@ai-sdk/provider-utils': 4.0.12(zod@4.3.6)
+      '@ai-sdk/provider-utils': 4.0.12(zod@4.6.6)
       '@opentelemetry/api': 1.9.0
-      zod: 4.3.6
+      zod: 4.6.6
 
   ansi-escapes@7.2.0:
     dependencies:
@@ -873,4 +873,4 @@ snapshots:
 
   yoga-layout@3.2.1: {}
 
-  zod@4.3.6: {}
+  zod@4.6.6: {}
